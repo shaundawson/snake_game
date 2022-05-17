@@ -1,6 +1,10 @@
 from turtle import Turtle
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 
 # TODO: Create a snake body
 # segment_1 = Turtle(shape="square")
@@ -42,13 +46,15 @@ class Snake:
     
 
     def up(self):
-        self.head.setheading(90)
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
 
     def down(self):
-       self.head.setheading(270)
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
 
     def right(self):
-        self.head.setheading(0)
+        self.head.setheading(RIGHT)
 
     def left(self):
-        self.head.setheading(180)
+        self.head.setheading(LEFT)
