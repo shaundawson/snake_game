@@ -19,8 +19,6 @@ RIGHT = 0
 # segment_3.goto(-40,0)
 
 class Snake:
-
-    
     def __init__(self):
         self.segments = []
         self.create_snake()
@@ -58,13 +56,16 @@ class Snake:
         if self.head.heading() != DOWN:
             self.head.setheading(UP)
 
+
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
 
+
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+
 
     def left(self):
         if self.head.heading() != RIGHT:
